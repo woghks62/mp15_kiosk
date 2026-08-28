@@ -7,7 +7,9 @@ public class Customer
    
    private List<Basket> list = new List<Basket>();
 
-   private static int sum = 0;
+   public static int sum = 0;
+   public static int Totalorder = 0;
+   public static int TotalSum = 0;
 
    public void Clean()
    {
@@ -17,6 +19,8 @@ public class Customer
 
    public void Add(Menu menu,int count)   // 주문한 음식과 개수
    {
+      Totalorder++;
+      TotalSum += count * menu.Price;
       for (int i = 0; i < list.Count; i++)   // 장바구니 카운트까지 돌아
       {
          if (list[i]._menu == menu)       //리스트i의 메뉴가 주문한 음식과 같으면
@@ -26,6 +30,7 @@ public class Customer
          }
       }
       list.Add(new Basket(menu, count));
+      
    }
 
    public void Pay()

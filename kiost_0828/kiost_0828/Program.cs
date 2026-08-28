@@ -6,6 +6,7 @@ using kiost_0828;
 class Program
 {
     const string Name = "맥도날드";
+    public static int TotalorderSum = 0;
     
     static void Main(string[] args)
     {
@@ -86,8 +87,21 @@ class Program
                     break;
                 case 3:
                     customer.BascketInfo(menuCount);
+                    int paid = ConsoleInput.ReadIntAtLeast("받은 금액 : ", 0);
+                    Console.WriteLine(Customer.sum);
+                    if (paid >= Customer.sum)
+                    {
+                        Console.WriteLine($"거스름돈 : {paid - Customer.sum}");
+                        TotalorderSum += Customer.sum;
+                    }
+                    else
+                    {
+                        Console.WriteLine("돈이 부족합니다.");
+                    }
                     break;
                 case 4:
+                    Console.WriteLine($"총 주문 건수: {Customer.Totalorder}");
+                    Console.WriteLine($"매출액 : {TotalorderSum}");
                     finished = true;
                     break;
             }
