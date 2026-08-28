@@ -1,4 +1,4 @@
-﻿// https://github.com/본인계정/저장소이름
+﻿// https://github.com/woghks62/mp15_kiosk
 
 using System;
 using kiost_0828;
