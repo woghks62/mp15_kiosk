@@ -3,6 +3,7 @@ namespace kiost_0828;
 public class Drink : Menu
 {
     private const string Price_criteria = "음식 사면 50% 할인";
+    private const float sale = 0.5f;
     
     public Drink(string name, int price, string type)
         : base(name, price, type)
