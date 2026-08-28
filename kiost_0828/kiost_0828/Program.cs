@@ -4,12 +4,12 @@ using System;
 
 class Program
 {
-    //public string Name = "맥도날드";
+    const string Name = "맥도날드";
     static void Main(string[] args)  
     {  
         Console.WriteLine("----------------------------------------  ");
 
-        //Console.WriteLine($"{Name} 주문 키오스크");
+        Console.WriteLine($"{Name} 주문 키오스크");
         
         Console.WriteLine("----------------------------------------  ");
     }  
