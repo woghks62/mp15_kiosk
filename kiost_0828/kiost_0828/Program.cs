@@ -52,7 +52,7 @@ class Program
                 customer.BascketInfo(menuCount);
                 break;
             case 2:
-                
+                customer.Clean();
                 break;
             case 3:
                 //

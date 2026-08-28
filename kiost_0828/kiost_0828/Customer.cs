@@ -10,6 +10,7 @@ public class Customer
    public void Clean()
    {
       list.Clear();
+      Console.WriteLine("장바구니 전체 비우기 성공");
    }
 
    public void Add(Menu menu,int count)
