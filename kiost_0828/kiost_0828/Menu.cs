@@ -3,7 +3,7 @@ namespace kiost_0828;
 public abstract class Menu
 {
     public virtual string Name { get; set; }
-    protected int Price { get; set; }
+    public int Price { get; private set; }
     protected string Type { get; set; }
     
     public Menu(string name, int price, string type)

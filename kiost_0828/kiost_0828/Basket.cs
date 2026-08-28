@@ -2,8 +2,10 @@ namespace kiost_0828;
 
 public class Basket
 {
-    public Menu _menu { get; set; }
-    protected int _count { get; set; }
+    public Menu _menu { get; private set; }
+    public int _count { get; private set; }
+    
+    static int sum = 0;
 
     public Basket(Menu menu, int count)
     {
@@ -24,9 +26,11 @@ public class Basket
     
     public static void BasketSum(int pay)
     {
-        int sum = 0;
         sum+=pay;
+    }
+
+    public static void PrintBaketSum(int sum)
+    {
         Console.WriteLine($"  합계 : {sum}원");
-        
     }
 }
