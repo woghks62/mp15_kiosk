@@ -1,6 +1,6 @@
 namespace kiost_0828;
 
-public class Menu
+public abstract class Menu
 {
     protected virtual string Name { get; set; }
     protected int Price { get; set; }
