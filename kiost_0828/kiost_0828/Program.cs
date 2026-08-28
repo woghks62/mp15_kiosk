@@ -88,7 +88,7 @@ class Program
                 case 3:
                     customer.BascketInfo(menuCount);
                     int paid = ConsoleInput.ReadIntAtLeast("받은 금액 : ", 0);
-                    Console.WriteLine(Customer.sum);
+                    //Console.WriteLine(Customer.sum);
                     if (paid >= Customer.sum)
                     {
                         Console.WriteLine($"거스름돈 : {paid - Customer.sum}");
