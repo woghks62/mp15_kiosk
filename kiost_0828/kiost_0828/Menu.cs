@@ -12,5 +12,9 @@ public class Menu
         Price = price;
         Type = type;
     }
-    
+
+    public virtual void MenuInfo()
+    {
+        Console.WriteLine($"{Name} - {Price} - {Type}");
+    }
 }
