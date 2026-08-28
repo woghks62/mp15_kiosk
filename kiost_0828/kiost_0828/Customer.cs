@@ -37,6 +37,10 @@ public class Customer
 
    public void BascketInfo(int count)
    {
+      if (count <= 0)
+      {
+         Console.WriteLine("장바구니가 비어있습니다.");
+      }
       for (int i = 0; i < list.Count; i++)
       {
          Console.WriteLine($"  {list[i]._menu.Name} x{count}  {list[i].Total()}원");
