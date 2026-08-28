@@ -32,20 +32,39 @@ class Program
         
         Console.WriteLine("----------------------------------------  ");
         
+        // int choiceNumber = ConsoleInput.ReadIntInRange("", 1, 4);
+        // switch (choiceNumber)
+        // {
+        //     case 1:
+        //         //
+        //         break;
+        //     case 2:
+        //         
+        //         break;
+        //     case 3:
+        //         //
+        //         break;
+        //     case 4:
+        //         
+        //         break;
+        // }
+        
         // 장바구니 정보
         Console.WriteLine("[장바구니]");
         Customer customer = new Customer();
         
         int menuNumber = ConsoleInput.ReadIntInRange("메뉴 번호 : ", 1, 6);
-        int menuCount = ConsoleInput.ReadIntInRange("수량 : ", 1, 6);
+        int menuCount = ConsoleInput.ReadIntInRange("수량 : ", 1, 100);
         customer.Add(menus[menuNumber-1],menuCount);
-        
-        // customer.Add(menus[0],2);
-        // customer.Add(menus[1],3);
+
         customer.BascketInfo(menuCount);
         
         Console.WriteLine("----------------------------------------  ");
-
+        Console.WriteLine("1. 담기   2. 전체 비우기   3. 결제   4. 영업 종료");
+        Console.Write("번호 : ");
+        int choiceNumber = ConsoleInput.ReadIntInRange("", 1, 4);
+        
+        
 
 
         // // 1부터 6 사이의 번호를 받습니다. 숫자가 아니거나 범위를 벗어나면 다시 묻습니다.  
@@ -58,4 +77,7 @@ class Program
         // ConsoleInput.Pause();
 
     }  
+    
+    
 }
+

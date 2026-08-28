@@ -38,7 +38,9 @@ public class Customer
    {
       for (int i = 0; i < list.Count; i++)
       {
-         Console.WriteLine($"{list[i]._menu.Name} x{count} {list[i].Total()}원");
+         Console.WriteLine($"  {list[i]._menu.Name} x{count}  {list[i].Total()}원");
+         Basket.BasketSum(list[i].Total());
+
       }
    }
    
