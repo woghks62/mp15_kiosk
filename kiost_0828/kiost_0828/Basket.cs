@@ -21,6 +21,7 @@ public class Basket
         return _menu.Pay(_count);
     }
 
+    
     public static void BasketSum(int pay)
     {
         int sum = 0;
