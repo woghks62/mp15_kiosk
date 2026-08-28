@@ -33,35 +33,67 @@ class Program
         Console.WriteLine("----------------------------------------  ");
         
 
-        Console.WriteLine("1. 담기   2. 전체 비우기   3. 결제   4. 영업 종료");
-        Console.Write("번호 : ");
-        int choiceNumber = ConsoleInput.ReadIntInRange("", 1, 4);
+        // Console.WriteLine("1. 담기   2. 전체 비우기   3. 결제   4. 영업 종료");
+        // Console.Write("번호 : ");
+        // int choiceNumber = ConsoleInput.ReadIntInRange("", 1, 4);
         // 장바구니 정보
         
         Customer customer = new Customer();
         int menuCount=0;
         
-        switch (choiceNumber)
+        // switch (choiceNumber)
+        // {
+        //     case 1: // 담기
+        //         // 메뉴 번호 수량 받아서 담기
+        //         int menuNumber = ConsoleInput.ReadIntInRange("메뉴 번호 : ", 1, 6);
+        //         menuCount = ConsoleInput.ReadIntInRange("수량 : ", 1, 100);
+        //         customer.Add(menus[menuNumber-1],menuCount);
+        //         // 장바구니 안 정보 출력
+        //         Console.WriteLine("[장바구니]");
+        //         customer.BascketInfo(menuCount);
+        //         break;
+        //     case 2:
+        //         customer.Clean();
+        //         break;
+        //     case 3:
+        //         customer.BascketInfo(menuCount);
+        //         break;
+        //     case 4:
+        //         
+        //         break;
+        // }
+
+        bool finished = false;
+        while (!finished)
         {
-            case 1: // 담기
-                // 메뉴 번호 수량 받아서 담기
-                int menuNumber = ConsoleInput.ReadIntInRange("메뉴 번호 : ", 1, 6);
-                menuCount = ConsoleInput.ReadIntInRange("수량 : ", 1, 100);
-                customer.Add(menus[menuNumber-1],menuCount);
-                // 장바구니 안 정보 출력
-                Console.WriteLine("[장바구니]");
-                customer.BascketInfo(menuCount);
-                break;
-            case 2:
-                customer.Clean();
-                break;
-            case 3:
-                customer.BascketInfo(menuCount);
-                break;
-            case 4:
-                
-                break;
+            Console.WriteLine("1. 담기   2. 전체 비우기   3. 결제   4. 영업 종료");
+            Console.Write("번호 : ");
+            int choiceNumber = ConsoleInput.ReadIntInRange("", 1, 4);
+            
+            switch (choiceNumber)
+            {
+                case 1: // 담기
+                    // 메뉴 번호 수량 받아서 담기
+                    int menuNumber = ConsoleInput.ReadIntInRange("메뉴 번호 : ", 1, 6);
+                    menuCount = ConsoleInput.ReadIntInRange("수량 : ", 1, 100);
+                    customer.Add(menus[menuNumber-1],menuCount);
+                    // 장바구니 안 정보 출력
+                    Console.WriteLine("[장바구니]");
+                    customer.BascketInfo(menuCount);
+                    break;
+                case 2:
+                    customer.Clean();
+                    break;
+                case 3:
+                    customer.BascketInfo(menuCount);
+                    break;
+                case 4:
+                    finished = true;
+                    break;
+            }
         }
+        
+        
         
         
         
