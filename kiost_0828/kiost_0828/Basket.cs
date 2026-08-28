@@ -2,22 +2,22 @@ namespace kiost_0828;
 
 public class Basket
 {
-    protected string _name { get; set; }
+    public Menu _menu { get; set; }
     protected int _count { get; set; }
 
-    public Basket(string name, int count)
+    public Basket(Menu menu, int count)
     {
-        _name = name;
+        _menu = menu;
         _count = count;
     }
     
-    public void Add(string name, int count)
+    public void Add(int count)
     {
         _count += count;
     }
 
-    public void Total()
+    public int Total()
     {
-        
+        return _menu.Pay(_count);
     }
 }

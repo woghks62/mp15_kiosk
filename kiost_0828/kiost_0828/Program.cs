@@ -32,10 +32,22 @@ class Program
         
         Console.WriteLine("----------------------------------------  ");
         
+        // 장바구니 정보
         Console.WriteLine("[장바구니]");
+        Customer customer = new Customer();
         
+        int menuNumber = ConsoleInput.ReadIntInRange("메뉴 번호 : ", 1, 6);
+        int menuCount = ConsoleInput.ReadIntInRange("수량 : ", 1, 6);
+        customer.Add(menus[menuNumber-1],menuCount);
         
+        // customer.Add(menus[0],2);
+        // customer.Add(menus[1],3);
+        customer.BascketInfo(menuCount);
         
+        Console.WriteLine("----------------------------------------  ");
+
+
+
         // // 1부터 6 사이의 번호를 받습니다. 숫자가 아니거나 범위를 벗어나면 다시 묻습니다.  
         // int menuNumber = ConsoleInput.ReadIntInRange("메뉴 번호 : ", 1, 6);
         //
@@ -44,6 +56,6 @@ class Program
         //
         // // 결과를 보여 준 뒤 화면을 지우기 전에 잠시 멈춥니다.  
         // ConsoleInput.Pause();
-        
+
     }  
 }
