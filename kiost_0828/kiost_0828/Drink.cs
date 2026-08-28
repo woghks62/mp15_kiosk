@@ -2,8 +2,8 @@ namespace kiost_0828;
 
 public class Drink : Menu
 {
-    private const string Price_criteria = "음식 사면 50% 할인";
-    private const float sale = 0.5f;
+    private const string Price_criteria = "3개 이상 10% 할인";
+    private const float sale = 0.9f;
     
     public Drink(string name, int price, string type)
         : base(name, price, type)
@@ -18,6 +18,13 @@ public class Drink : Menu
     
     public override int Pay(int count)
     {
-        return 0;
+        if (count >= 3)
+        {
+            return (int)((count*Price)*sale);
+        }
+        else
+        {
+            return count * Price;
+        }
     }
 }
