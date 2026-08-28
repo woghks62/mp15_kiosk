@@ -11,13 +11,12 @@ class Program
     {
         Drink amricano = new("아메리카노", 10, "음료");
         Drink coke = new("콜라", 100, "음료");
+        Food hamburger = new("햄버거", 200, "음식");
+        Food cheeseburger = new("치즈버거", 300, "음식");
+        Food chickenburger = new("치즈버거", 400, "음식");
 
-        Menu[] menus = { amricano, coke };
+        Menu[] menus = { amricano, coke, hamburger, cheeseburger, chickenburger };
 
-        // foreach (Menu menu in menus)
-        // {
-        //     menu.MenuInfo();
-        // }
 
         for (int i = 0; i < menus.Length; i++)
         {
