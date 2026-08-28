@@ -18,16 +18,23 @@ class Program
         Menu[] menus = { amricano, coke, hamburger, cheeseburger, chickenburger };
 
 
-        for (int i = 0; i < menus.Length; i++)
-        {
-            Console.Write($"{i+1}. ");
-            menus[i].MenuInfo();
-        }
+        
         
         Console.WriteLine("----------------------------------------  ");
 
         Console.WriteLine($"{Name} 주문 키오스크");
         
         Console.WriteLine("----------------------------------------  ");
+        
+        for (int i = 0; i < menus.Length; i++)
+        {
+            Console.Write($"  {i+1}. ");
+            menus[i].MenuInfo();
+        }
+        
+        Console.WriteLine("----------------------------------------  ");
+        
+        Console.WriteLine("[장바구니]");
+        
     }  
 }
