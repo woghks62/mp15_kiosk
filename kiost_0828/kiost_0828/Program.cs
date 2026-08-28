@@ -14,9 +14,15 @@ class Program
 
         Menu[] menus = { amricano, coke };
 
-        foreach (Menu menu in menus)
+        // foreach (Menu menu in menus)
+        // {
+        //     menu.MenuInfo();
+        // }
+
+        for (int i = 0; i < menus.Length; i++)
         {
-            menu.MenuInfo();
+            Console.Write($"{i+1}. ");
+            menus[i].MenuInfo();
         }
         
         Console.WriteLine("----------------------------------------  ");
