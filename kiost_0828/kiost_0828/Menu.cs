@@ -17,4 +17,6 @@ public abstract class Menu
     {
         Console.WriteLine($"{Name} - {Price} - {Type}");
     }
+
+    public abstract int Pay(int num);
 }
