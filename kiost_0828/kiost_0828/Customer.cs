@@ -8,7 +8,7 @@ public class Customer
    private List<Basket> list = new List<Basket>();
 
    public static int sum = 0;
-   public static int Totalorder = 0;
+   //public static int Totalorder = 0;
    public static int TotalSum = 0;
 
    public void Clean()
@@ -19,7 +19,7 @@ public class Customer
 
    public void Add(Menu menu,int count)   // 주문한 음식과 개수
    {
-      Totalorder++;
+      //Totalorder++;
       TotalSum += count * menu.Price;
       for (int i = 0; i < list.Count; i++)   // 장바구니 카운트까지 돌아
       {

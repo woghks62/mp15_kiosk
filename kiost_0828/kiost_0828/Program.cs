@@ -7,6 +7,7 @@ class Program
 {
     const string Name = "맥도날드";
     public static int TotalorderSum = 0;
+    public static int Totalorder = 0;
     
     static void Main(string[] args)
     {
@@ -93,6 +94,7 @@ class Program
                     {
                         Console.WriteLine($"거스름돈 : {paid - Customer.sum}");
                         TotalorderSum += Customer.sum;
+                        Totalorder++;
                     }
                     else
                     {
@@ -100,7 +102,7 @@ class Program
                     }
                     break;
                 case 4:
-                    Console.WriteLine($"총 주문 건수: {Customer.Totalorder}");
+                    Console.WriteLine($"총 주문 건수: {Totalorder}");
                     Console.WriteLine($"매출액 : {TotalorderSum}");
                     finished = true;
                     break;
